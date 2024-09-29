@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+#include <cmath>
+
+int main() {
+    int T;
+    cin >> T;
+    while (T--) {
+        int N, X;
+        cin >> N >> X;
+        int subscriptions = (int)ceil((double)N / 6);
+        int totalCost = subscriptions * X;
+        cout << totalCost <<endl;
+    }
+    return 0;
+}
