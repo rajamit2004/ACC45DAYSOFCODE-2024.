@@ -1,0 +1,32 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int T;  
+    cin >> T;
+
+    while (T--) {
+        int N, K;
+        cin >> N >> K;  
+
+        vector<int> characteristics(N);  
+        for (int i = 0; i < N; ++i) {
+            cin >> characteristics[i];
+        }
+
+        int wolverine_count = 0;  
+
+        
+        for (int i = 0; i < N; ++i) {
+            int mutated_value = characteristics[i] + K;
+            if (mutated_value % 7 == 0) {
+                wolverine_count++;
+            }
+        }
+
+        cout << wolverine_count << endl;  
+    }
+
+    return 0;
+}
